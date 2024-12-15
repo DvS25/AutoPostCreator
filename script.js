@@ -67,10 +67,3 @@ generateBtn.addEventListener('click', () => {
     }
 });
 
-// Event Listener for Download Button
-downloadBtn.addEventListener('click', () => {
-    const link = document.createElement('a'); // Create a temporary link element
-    link.download = 'custom_blood_donation_post.png'; // File name for the download
-    link.href = canvas.toDataURL('image/png'); // Convert canvas content to image data
-    link.click(); // Trigger the download
-});
