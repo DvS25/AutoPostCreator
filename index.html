@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramdut Yuvak Mandal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Blood Donation Post</h1>
+        
+        <div>
+            <img style="width: 100%;border: 1px solid #ccc;" src="assets/1.png" >
+        </div>
+
+        <hr />
+        <!-- Upload Section -->
+        <div class="form-container">
+            <label for="imageUpload" style="float: left;">Upload Your Image:</label>
+            <input type="file" id="imageUpload" accept="image/*" style="float: left;">
+
+            <label for="userName" style="float: left;">Enter Your Name:</label>
+            <input type="text" id="userName" placeholder="Your Name" style="float: left;">
+
+            <button id="generateBtn">Generate Post</button>
+            <!-- <button id="downloadBtn">Download Post</button> -->
+        </div>
+
+
+        <!-- Canvas to Display the Post -->
+        <div class="canvas-container">
+            <canvas id="postCanvas" width="1080" height="1920" style="display: none;"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
