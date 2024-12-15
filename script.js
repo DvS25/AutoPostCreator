@@ -49,14 +49,16 @@ generateBtn.addEventListener('click', () => {
                 ctx.fillStyle = 'green';
                 ctx.textAlign = 'center';
                 ctx.fillText(userNameInput.value || 'Your Name Here', centerX, centerY + 273);
+
+                
+                const link = document.createElement('a'); // Create a temporary link element
+                link.download = 'custom_blood_donation_post.png'; // File name for the download
+                link.href = canvas.toDataURL('image/png'); // Convert canvas content to image data
+                link.click(); // Trigger the download
             };
         };
         reader.readAsDataURL(file);
 
-        const link = document.createElement('a'); // Create a temporary link element
-        link.download = 'custom_blood_donation_post.png'; // File name for the download
-        link.href = canvas.toDataURL('image/png'); // Convert canvas content to image data
-        link.click(); // Trigger the download
 
         document.getElementById("postCanvas").style.display = 'none';
 
